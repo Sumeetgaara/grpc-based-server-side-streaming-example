@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "realtimeapi.Protos";
+
+
+service streaming {
+  // Server streaming
+  rpc StreamingFromServer (streamrequest) returns (stream streamresponse);
+}
+
+message streamrequest{
+	string request = 1;
+}
+
+message streamresponse{
+	string response = 1;
+}
